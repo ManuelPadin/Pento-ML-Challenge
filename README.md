@@ -1,17 +1,17 @@
 ## Pento Coding challenge
 
 ### Readme
-El problema inicialmente en clasificar imagenes de 4 razas de perro. Posteriormente se pide clasificar imagenes que no tenemos dentro de otra categoría llama other.
-Para resolver el problema inicial se uso una estrategia de TransferLearning con ResNet152V2, para la segunda instancia de categorización se empleo una estrategia y se propuso la idea de otra.
+The initial problem involves classifying images of 4 dog breeds. Subsequently, the task is to classify images that do not belong to these breeds into another category called "other."
+To solve the initial problem, a Transfer Learning strategy using ResNet152V2 was employed. For the second instance of categorization, one strategy was implemented and another proposed.
 
-### Contenido
+### Content
 
-- MLChallenge.ipynb: El cuaderno de trabajo donde esta la solución al problema
-- Pruebas: Repositorio de imágenes de casos borde
-- dogs: Imagenes originales
-- output: Imagenes dividas entre train, test, val
+- MLChallenge.ipynb: The notebook containing the solution to the problem
+- Pruebas: Repository of borderline image cases
+- dogs: Original images
+- output: Images divided into train, test, and val sets
 - Machine Learning Engineer Challenge.pdf : Rubricas 
 
-### Testeo 
-Para evaluar el modelo de clasificación de razas de perro se puede usar `model.evaluate` generando previamente un nuevo conjunto de testeo con sus correspondientes etiquetas. Para la evaluación con other cree una función llamada `clasificar_imagen(path,threshold)` que toma como argumentos el camino a 
-la imagen y un threshold que yo defini sea 0.97 para separar otras razas de perro. Esta última devuelve la predicción y el output de mayor salida del modelo original.
+### Testing
+
+To evaluate the dog breed classification model, you can use `model.evaluate`, after generating a new testing set with corresponding labels. For the "other" evaluation, I created a function called `classifyimg(path,threshold)`, which takes the image path and a threshold (I set it at 0.97) to separate other dog breeds. This function returns the prediction and the highest output of the original model.
